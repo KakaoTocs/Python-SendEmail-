@@ -1,6 +1,6 @@
 # Python-SendEmail-
 ## 1. 설명
-<pre><code>파이썬에서 이메일을 보내는 방법을 다룬다.</code></pre>
+파이썬에서 이메일을 보내는 방법을 다룬다.
 ## 2. 사용법
 1. EmailSend_module.py 파일을 다운받는다.
 2. 파일을 프로젝트파일과 같은 경로에 추가한다.
@@ -8,6 +8,9 @@
 <pre><code>import EmailSend_module
 ...
 EmailSend_module.run(sender_ID, sender_PW, sender_Provider, receiver_ID, send_contents, send_title)</code></pre>
+4. 모듈 에러시 모듈설치 필요
+> cmd->pip install [모듈명]
+> 사용되는 모듈: smtplib, email
 ## 3. 사용 예시
 <pre><code>import EmailSend_module
 

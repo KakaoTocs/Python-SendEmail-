@@ -3,12 +3,13 @@ from email.mime.text import MIMEText
 
 class mail:
     def __init__(self, receiverID, title, contents):
+        self.receiverID = receiverID
         self.email = MIMEText(contents)
         self.email['Subject'] = title
         self.email['To'] = receiverID
 
-    def send(self, sender, receiverID):
-        sender.smtp.sendmail(sender.id, receiverID, self.email.as_string())
+    def send(self, sender):
+        sender.smtp.sendmail(sender.id, self.receiverID, self.email.as_string())
         sender.smtp.quit()
 
 class sender:

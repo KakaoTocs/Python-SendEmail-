@@ -23,13 +23,9 @@ receiver_ID = 'clone66@gmail.com'
 send_contents = 'Hello Clone66!!'
 send_title = 'From Clone55'
 
-# dev version
-mail = EmailSend_module_dev.mail(receiver_ID, send_title, send_contents)
-sender = EmailSend_module_dev.sender(sender_ID, sender_PW, sender_Provider)
+mail = EmailSend_module.mail(receiver_ID, send_title, send_contents)
+sender = EmailSend_module.sender(sender_ID, sender_PW, sender_Provider)
 mail.send(sender)
-
-# normal version
-EmailSend_module.run(sender_ID, sender_PW, sender_Provider, receiver_ID, send_contents, send_title)</code></pre
 
 ## 4. 설명
 import EmailSend_module는 모듈파일을 프로젝트에 추가하는 역할이다.

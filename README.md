@@ -7,7 +7,12 @@
 3. 프로젝트에 아래코드를 추가한다.
 <pre><code>import EmailSend_module
 ...
-EmailSend_module.run(sender_ID, sender_PW, sender_Provider, receiver_ID, send_contents, send_title)</code></pre>
+# 메일 객체 생성
+mail = EmailSend_module.mail([받는 이메일], [제목], [내용])
+# 보내는 사람 객체 생성
+sender = EmailSend_module.sender([보내는 이메일], [보내는 이메일 비밀번호], [SMTP서버명])
+# 메일 메서드 매개변수로 보내는 사람 객체 전달
+mail.send(sender)</code></pre>
 4. 모듈 에러시 모듈설치 필요
 > cmd->pip install [모듈명]
 > 사용되는 모듈: smtplib, email
